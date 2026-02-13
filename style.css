@@ -168,3 +168,34 @@ h1, h2 {
 .back-to-blog a:hover {
     background: #1e3c72;
 }
+
+/* Page Styling */
+.page-content {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.page {
+    background: #fff;
+    padding: 50px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.page .page-title {
+    font-size: 42px;
+    color: #1e3c72;
+    margin-bottom: 30px;
+    border-bottom: 3px solid #2a5298;
+    padding-bottom: 20px;
+}
+
+.page .page-content-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.page .page-content-text p {
+    margin-bottom: 20px;
+}
