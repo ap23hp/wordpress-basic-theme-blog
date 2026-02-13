@@ -31,3 +31,32 @@ h1, h2 {
     border-radius: 5px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+/* Navigation Menu */
+.main-navigation {
+    margin-top: 20px;
+}
+
+.primary-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 20px;
+}
+
+.primary-menu li {
+    display: inline-block;
+}
+
+.primary-menu a {
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+    transition: background 0.3s;
+}
+
+.primary-menu a:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 4px;
+}
