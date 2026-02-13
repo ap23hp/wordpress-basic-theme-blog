@@ -52,4 +52,43 @@ function create_finance_sample_content() {
     update_option('finance_theme_sample_content', true);
 }
 add_action('after_switch_theme', 'create_finance_sample_content');
+// Create sample pages on theme activation
+function create_finance_sample_pages() {
+    if (get_option('finance_theme_sample_pages')) {
+        return; // Already created
+    }
+    
+    // Sample pages
+    $pages = array(
+        array(
+            'title'   => 'Home',
+            'content' => 'Welcome to Finance Pro - Your trusted source for financial news and analysis.'
+        ),
+        array(
+            'title'   => 'About Us',
+            'content' => 'Finance Pro was founded to make financial education accessible to everyone.'
+        ),
+        array(
+            'title'   => 'Services',
+            'content' => 'We offer Investment Advisory, Retirement Planning, Tax Planning, and Portfolio Management.'
+        ),
+        array(
+            'title'   => 'Contact',
+            'content' => 'Get in touch with our financial experts. Email: info@financepro.com'
+        )
+    );
+    
+    foreach ($pages as $page_data) {
+        wp_insert_post(array(
+            'post_title'   => $page_data['title'],
+            'post_content' => $page_data['content'],
+            'post_status'  => 'publish',
+            'post_type'    => 'page' // Note: 'page' not 'post'
+        ));
+    }
+    
+    update_option('finance_theme_sample_pages', true);
+}
+add_action('after_switch_theme', 'create_finance_sample_pages');
+
 ?>
