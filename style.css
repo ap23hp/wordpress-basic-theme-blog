@@ -1,7 +1,7 @@
 /*
-Theme Name: My Portfolio Theme
+Theme Name: My finance blog Theme
 Author: ApraK
-Description: Learning WordPress theme development
+Description: WordPress theme development
 Version: 1.0
 */
 
@@ -14,22 +14,46 @@ body {
 }
 
 h1, h2 {
-    color: #333;
+    color: #000;
 }
 
 .site-header {
-    background: #333;
+    background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
     color: #fff;
-    padding: 20px;
+    padding: 30px 20px;
     margin-bottom: 20px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
 }
-
+.site-header h1{
+  color:#fff;
+}
 .post {
     background: #fff;
-    padding: 20px;
-    margin-bottom: 20px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    padding: 25px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    border-left: 4px solid #2a5298;
+    transition: transform 0.2s;
+}
+
+.post:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.12);
+}
+
+.post h2 {
+    color: #1e3c72;
+    margin-bottom: 15px;
+}
+
+.post h2 a {
+    color: #1e3c72;
+    text-decoration: none;
+}
+
+.post h2 a:hover {
+    color: #2a5298;
 }
 /* Navigation Menu */
 .main-navigation {
